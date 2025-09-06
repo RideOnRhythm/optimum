@@ -15,12 +15,5 @@
 
 from ..utils.import_utils import _transformers_version, is_transformers_version
 
-
-if is_transformers_version(">=", "4.49"):
-    raise RuntimeError(
-        f"BetterTransformer requires transformers<4.49 but found {_transformers_version}. "
-        "`optimum.bettertransformer` is deprecated and will be removed in optimum v2.0."
-    )
-
 from .models import BetterTransformerManager
 from .transformation import BetterTransformer
